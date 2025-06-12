@@ -2,7 +2,7 @@
  * @Author: HuuGua newhutu@163.com
  * @Date: 2025-06-09 23:19:55
  * @LastEditors: HuuGua newhutu@163.com
- * @LastEditTime: 2025-06-09 23:20:21
+ * @LastEditTime: 2025-06-12 13:56:30
  * @FilePath: \单页小游戏\小游戏网页1\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,70 +10,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Monster Survivors - Play Free Online Game | MonsterSurvivors.com</title>
-  <meta name="description" content="Play Monster Survivors, the thrilling online survival game! Battle waves of monsters, upgrade your hero, and see how long you can survive. Enjoy seamless gameplay on PC and mobile.">
-  <link rel="canonical" href="https://monstersurvivors.com/">
-  <!-- Tailwind CSS CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Portal</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Apple Touch Icon (optional, for Apple devices) -->
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-gray-100 min-h-screen text-gray-900 font-sans">
-  <header class="py-8 bg-white/80 shadow-md">
-    <div class="container mx-auto px-4 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-2">Monster Survivors</h1>
-      <p class="text-lg md:text-xl text-gray-700 font-medium">Survive the monster onslaught. How long can you last?</p>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-4 py-8">
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold text-green-600 mb-4">Play Monster Survivors Online</h2>
-      <div class="w-full aspect-video rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-gray-50">
-        <iframe
-          src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
-          title="Monster Survivors Online Game"
-          class="w-full h-full min-h-[400px] md:min-h-[600px] border-0"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
+<body class="bg-gray-900 min-h-screen text-white">
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <nav class="w-64 bg-[#181c2b] flex flex-col py-4 px-2 shadow-lg justify-between" style="min-height:100vh;">
+      <div>
+        <div class="flex items-center justify-center mb-8">
+          <img src="https://img.icons8.com/fluency/48/000000/controller.png" alt="logo" class="w-8 h-8 mr-2">
+          <span class="text-2xl font-extrabold tracking-wide">Game Portal</span>
+        </div>
+        <ul class="space-y-2 text-base">
+          <li><span class="block text-gray-400 uppercase text-xs mb-2">Menu</span></li>
+          <li><button class="w-full text-left px-4 py-2 rounded hover:bg-[#23263a] transition flex items-center gap-2" onclick="showGame('monster-survivors')"><img src='https://img.icons8.com/color/24/dragon.png' class='inline' alt='Monster'/>Monster Survivors</button></li>
+          <li><button class="w-full text-left px-4 py-2 rounded hover:bg-[#23263a] transition flex items-center gap-2" onclick="showGame('jelly-snake')"><img src='https://img.icons8.com/color/24/snake.png' class='inline' alt='Snake'/>Jelly Snake</button></li>
+          <li><button class="w-full text-left px-4 py-2 rounded hover:bg-[#23263a] transition flex items-center gap-2" onclick="showGame('princess-rescue-fruit-connect')"><img src='https://img.icons8.com/color/24/crown.png' class='inline' alt='Princess'/>Princess Rescue Fruit Connect</button></li>
+          <li><button class="w-full text-left px-4 py-2 rounded hover:bg-[#23263a] transition flex items-center gap-2" onclick="showGame('happy-blocks')"><img src='https://img.icons8.com/color/24/lego.png' class='inline' alt='Blocks'/>Happy Blocks</button></li>
+          <li class="mt-6"><span class="block text-gray-400 uppercase text-xs mb-2">Categories</span></li>
+          <li class="flex items-center gap-2 px-4 py-2 text-gray-300"><img src='https://img.icons8.com/color/24/000000/sword.png' class='inline' alt='Action'/>Action</li>
+          <li class="flex items-center gap-2 px-4 py-2 text-gray-300"><img src='https://img.icons8.com/color/24/000000/puzzle.png' class='inline' alt='Puzzle'/>Puzzle</li>
+          <li class="flex items-center gap-2 px-4 py-2 text-gray-300"><img src='https://img.icons8.com/color/24/000000/joystick.png' class='inline' alt='Casual'/>Casual</li>
+          <li class="flex items-center gap-2 px-4 py-2 text-gray-300"><img src='https://img.icons8.com/color/24/000000/multiple-users.png' class='inline' alt='Multiplayer'/>Multiplayer</li>
+        </ul>
       </div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold text-purple-600 mb-2">About Monster Survivors</h2>
-      <p class="text-base md:text-lg text-gray-800">
-        Monster Survivors is an action-packed survival game where you face endless waves of terrifying monsters. Upgrade your hero, unlock powerful abilities, and compete for the highest score. Whether you're on PC or mobile, enjoy smooth gameplay and intuitive controls. Can you become the ultimate survivor?
-      </p>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-bold text-pink-600 mb-2">Game Features</h2>
-      <ul class="list-disc pl-6 text-gray-800 space-y-1">
-        <li>Fast-paced survival action with increasing difficulty</li>
-        <li>Multiple heroes and upgrades to unlock</li>
-        <li>Global leaderboards and achievements</li>
-        <li>Seamless play on desktop and mobile devices</li>
-        <li>No download required – play instantly in your browser</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-bold text-yellow-600 mb-2">How to Play</h2>
-      <ol class="list-decimal pl-6 text-gray-800 space-y-1">
-        <li>Use your keyboard or touch controls to move your hero.</li>
-        <li>Defeat monsters and collect power-ups.</li>
-        <li>Upgrade your abilities between waves.</li>
-        <li>Survive as long as possible to set a new high score!</li>
-      </ol>
-    </section>
-  </main>
-
-  <footer class="py-6 bg-white/80 mt-12 border-t border-gray-200">
-    <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
-      &copy; 2024 MonsterSurvivors.com. All rights reserved.
+      <div class="mt-8 mb-2 p-4 rounded bg-[#23263a] text-xs text-gray-300 text-center min-h-[80px] flex items-center justify-center">
+        The site is under construction and will be updated with new games from time to time!<br>Wishing everyone who sees this a wonderful day.
+      </div>
+    </nav>
+    <!-- Main content -->
+    <div class="flex-1 flex flex-col min-h-screen">
+      <!-- Top bar -->
+      <header class="bg-[#23263a] px-8 py-4 flex items-center justify-between shadow">
+        <div class="flex-1 flex items-center">
+          <input type="text" placeholder="Search games..." class="w-96 px-4 py-2 rounded bg-[#181c2b] text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div class="flex items-center space-x-4">
+          <button class="bg-blue-600 px-4 py-2 rounded text-white font-semibold hover:bg-blue-700 transition">Sign In</button>
+        </div>
+      </header>
+      <!-- Game area -->
+      <main class="flex-1 flex items-center justify-center bg-gradient-to-br from-[#23263a] to-[#181c2b] p-0" id="main-content">
+        <div class="text-center w-full">
+          <h2 class="text-3xl font-semibold mb-4 text-white">Welcome to Game Portal</h2>
+          <p class="text-lg text-gray-300">Select a game from the left menu to start playing!</p>
+        </div>
+      </main>
+      <!-- Bottom bar -->
+      <footer class="bg-[#23263a] py-3 px-8 flex items-center justify-between border-t border-[#181c2b]">
+        <div class="flex items-center space-x-4">
+          <button class="w-8 h-8 flex items-center justify-center bg-[#181c2b] rounded hover:bg-blue-600 transition"><img src="https://img.icons8.com/fluency/24/000000/potion.png" alt="Potion"/></button>
+          <button class="w-8 h-8 flex items-center justify-center bg-[#181c2b] rounded hover:bg-green-600 transition"><img src="https://img.icons8.com/fluency/24/000000/up.png" alt="Upgrade"/></button>
+          <button class="w-8 h-8 flex items-center justify-center bg-[#181c2b] rounded opacity-50 cursor-not-allowed"><img src="https://img.icons8.com/fluency/24/lock.png" alt="Locked"/></button>
+        </div>
+        <div class="text-gray-400 text-sm">&copy; 2024 Game Portal. All rights reserved.</div>
+      </footer>
     </div>
-  </footer>
+  </div>
+  <script>
+    function showGame(game) {
+      let content = '';
+      if (game === 'monster-survivors') {
+        content = `<iframe src=\"games/monster-survivors.html\" class='w-full h-[80vh] rounded shadow border bg-white' frameborder='0' allowfullscreen></iframe>`;
+      } else if (game === 'jelly-snake') {
+        content = `<iframe src=\"games/jelly-snake.html\" class='w-full h-[80vh] rounded shadow border bg-white' frameborder='0' allowfullscreen></iframe>`;
+      } else if (game === 'princess-rescue-fruit-connect') {
+        content = `<iframe src=\"games/princess-rescue-fruit-connect.html\" class='w-full h-[80vh] rounded shadow border bg-white' frameborder='0' allowfullscreen></iframe>`;
+      } else if (game === 'happy-blocks') {
+        content = `<iframe src=\"games/happy-blocks.html\" class='w-full h-[80vh] rounded shadow border bg-white' frameborder='0' allowfullscreen></iframe>`;
+      }
+      document.getElementById('main-content').innerHTML = content;
+    }
+  </script>
 </body>
 </html> 

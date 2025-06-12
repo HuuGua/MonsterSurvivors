@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game 2 - Jelly Snake</title>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; background: #181c2b; }
+    body { width: 100vw; min-height: 100vh; overflow-x: hidden; }
+    .game-title { color: #7c3aed; font-size: 2rem; margin: 1.5rem 0 1rem 0; font-weight: bold; letter-spacing: 1px; text-align: center; }
+    .game-frame {
+      width: 100vw;
+      max-width: 100vw;
+      height: calc(100vh - 32px);
+      min-height: 480px;
+      border-radius: 0;
+      overflow: hidden;
+      background: #222;
+      box-shadow: none;
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+    }
+    iframe {
+      width: 100vw;
+      height: 100%;
+      min-height: 480px;
+      border: none;
+      border-radius: 0;
+      background: #222;
+      display: block;
+    }
+    .desc-outer {
+      width: 100vw;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 0;
+      align-items: flex-start;
+    }
+    .desc-section {
+      width: 95vw;
+      max-width: 900px;
+      background: #23263a;
+      color: #fff;
+      border-radius: 16px;
+      padding: 2rem 2.5rem 1.5rem 2.5rem;
+      box-shadow: 0 2px 12px #0004;
+      margin-top: 2rem;
+      text-align: left;
+      margin-left: 2vw;
+    }
+    .desc-section h2, .desc-section h3, .desc-section .game-title { margin-top: 0; text-align: left; }
+    .desc-section .about { color: #fff; font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.7; }
+    .desc-section .features-title { color: #fff; font-size: 1.2rem; font-weight: bold; margin-top: 2rem; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+    .desc-section .features-list { margin-left: 1.5rem; }
+    .desc-section .release-title { color: #fff; font-size: 1.1rem; font-weight: bold; margin-top: 2rem; margin-bottom: 0.5rem; }
+    .desc-section .dev-title { color: #fff; font-size: 1.1rem; font-weight: bold; margin-top: 2rem; margin-bottom: 0.5rem; }
+    .desc-section ul, .desc-section ol { margin-left: 1.5rem; }
+    .desc-section li { margin-bottom: 0.3rem; }
+    .comments-section {
+      width: 340px;
+      min-width: 240px;
+      max-width: 400px;
+      background: #23263a;
+      color: #fff;
+      border-radius: 16px;
+      margin-top: 2rem;
+      margin-left: 2vw;
+      box-shadow: 0 2px 12px #0004;
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .comment {
+      background: #181c2b;
+      border-radius: 10px;
+      padding: 1rem 1rem 0.7rem 1rem;
+      box-shadow: 0 1px 4px #0002;
+    }
+    .comment-user {
+      font-weight: bold;
+      color: #7c3aed;
+      margin-bottom: 0.2rem;
+    }
+    .comment-date {
+      font-size: 0.85em;
+      color: #aaa;
+      margin-bottom: 0.5rem;
+    }
+    .comment-content {
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      .desc-section { padding: 1rem 0.5rem; }
+      .game-frame, iframe { min-height: 240px; }
+    }
+    @media (max-width: 1200px) {
+      .desc-section { max-width: 70vw; }
+      .comments-section { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="game-frame">
+    <iframe src="https://www.crazygames.com/embed/jelly-snake" allow="gamepad *;"></iframe>
+  </div>
+  <div class="desc-outer">
+    <div class="desc-section">
+      <div class="game-title">jelly-snake</div>
+      <div class="about">
+        Jelly Snake is a unique snake game where only 1% of the super hand can go above level 100! From cute & simple levels to very difficult levels that developers have retired hundreds of times! Collect all the candies with Jelly Snakes that rotate left and right each time you touch them. Be careful not to hit wall, obstacles, and even monsters! You can reach higher levels only with your skills. Exchange the candies for cute snake decorations. Earn new jelly snakes with coins which you gain every time you clear a stage. Make the longest jelly snake in the world in challenge mode that will unlock at level 10. Win medals in challenge mode and get special exclusive Jelly Snakes. Try out various bizarre stages with brilliant ideas!
+      </div>
+      <div class="features-title">Features</div>
+      <ul class="features-list">
+        <li>Simple but not easy one-touch jelly snake action</li>
+        <li>Hundreds of levels with many obstacles can rotate, move, and change.</li>
+        <li>Simple at first, but more and more hard and amazing levels</li>
+        <li>Over 40 kinds of jelly snake characters</li>
+        <li>Tons of decorations can make your own cute Jelly Snake</li>
+        <li>Fun to find various easter eggs hidden on the map</li>
+      </ul>
+      <div class="release-title">Release Date</div>
+      <ul>
+        <li>March 2020 (Android)</li>
+        <li>April 2020 (iOS)</li>
+        <li>February 2023 (WebGL)</li>
+      </ul>
+      <div class="dev-title">Developer</div>
+      <div>Jelly Snake is developed by <b>Super Awesome Inc.</b></div>
+    </div>
+    <div class="comments-section">
+      <div style="font-size:1.2rem;font-weight:bold;color:#a78bfa;margin-bottom:1rem;">Comments</div>
+      <div class="comment">
+        <div class="comment-user">Alice</div>
+        <div class="comment-date">2024-06-12</div>
+        <div class="comment-content">This game is so addictive! I love the cute jelly snakes and the challenge mode is awesome.</div>
+      </div>
+      <div class="comment">
+        <div class="comment-user">Bob</div>
+        <div class="comment-date">2024-06-11</div>
+        <div class="comment-content">Great graphics and smooth gameplay. Would be cool to have more snake skins!</div>
+      </div>
+      <div class="comment">
+        <div class="comment-user">Charlie</div>
+        <div class="comment-date">2024-06-10</div>
+        <div class="comment-content">Found a hidden easter egg on level 15, nice touch! Looking forward to more updates.</div>
+      </div>
+      <div class="comment">
+        <div class="comment-user">Daisy</div>
+        <div class="comment-date">2024-06-09</div>
+        <div class="comment-content">My kids love this game. Simple controls and lots of fun. Highly recommended!</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
